@@ -15,3 +15,12 @@
 glass = {}
 glass.name = core.get_current_modname()
 glass.path = core.get_modpath(glass.name)
+
+
+local scripts = {
+	'functions',
+}
+
+for _, s in ipairs(scripts) do
+	dofile(glass.path .. '/' .. s .. '.lua')
+end
