@@ -8,4 +8,4 @@
 ]]
 
 
-colored_glass = {}
+glass = {}
