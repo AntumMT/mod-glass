@@ -20,6 +20,7 @@ glass.path = core.get_modpath(glass.name)
 local scripts = {
 	'functions',
 	'nodes',
+	'crafting',
 }
 
 for _, s in ipairs(scripts) do
