@@ -1,3 +1,14 @@
+--[[ LICENSE HEADER
+  
+  GNU Lesser General Public License version 2.1+
+  
+  Copyright © 2017 Perttu Ahola (celeron55) <celeron55@gmail.com>
+  Copyright © 2017 Minetest developers & contributors
+  
+  See: docs/license-LGPL-2.1.txt
+]]
+
+
 --- Glass nodes.
 --
 -- @module nodes

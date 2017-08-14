@@ -1,11 +1,13 @@
 ## Licensing for Glass Mod
 
 
+---
 ### **Code:**
 
-Original code by Jordan Irwin: [MIT][lic.mit]
+Originally by celeron55, Perttu Ahola <celeron55@gmail.com> ([LGPL 2.1][lic.lgpl])
+Various Minetest developers and contributors ([LGPL 2.1][lic.lgpl)
 
-
+---
 ### **Media:**
 
 - Mito551, ***CC BY-SA 3.0:***
@@ -17,6 +19,7 @@ Original code by Jordan Irwin: [MIT][lic.mit]
   - [glass_break.3.ogg](http://www.freesound.org/people/lsprice/sounds/88808) by lsprice
 
 
+---
 ### **Textures:**
 
 - Perttu Ahola ([celeron55](mailto:celeron55@gmail.com), ***CC BY-SA 3.0:***
@@ -30,4 +33,4 @@ Original code by Jordan Irwin: [MIT][lic.mit]
   - glass_obsidian.png
 
 
-[lic.mit]: docs/license-MIT.txt
+[lic.lgpl]: docs/license-LGPL-2.1.txt
