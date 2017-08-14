@@ -1,4 +1,4 @@
-## *Glass* mod for [Minetest][]
+## *Glass* Mod for [Minetest][]
 
 
 ### **Description:**
@@ -10,7 +10,7 @@ Minetest mod that intends to replace glass nodes from the [default[] mod in [min
 
 ### ***Licensing:***
 
-[MIT][]
+See [LICENSE.md](LICENSE.md)
 
 
 
@@ -20,5 +20,3 @@ Minetest mod that intends to replace glass nodes from the [default[] mod in [min
 [minetest_game]: https://github.com/minetest/minetest_game
 [node coloring]: https://github.com/minetest/minetest/pull/4986
 [stained_glass]: https://forum.minetest.net/viewtopic.php?t=4904
-
-[MIT]: LICENSE.txt
