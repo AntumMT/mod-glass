@@ -14,11 +14,24 @@
 -- @module nodes
 
 
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if core.global_exists('intllib') then
+	if intllib.make_gettext_pair then
+		S = intllib.make_gettext_pair()
+	else
+		S = intllib.Getter()
+	end
+else
+	S = function(s) return s end
+end
+
+
 --- Plain glass.
 --
 -- @node glass:plain
 core.register_node('glass:plain', {
-	description = 'Glass',
+	description = S('Glass'),
 	drawtype = 'glasslike_framed_optional',
 	tiles = {'glass_plain.png', 'glass_plain_detail.png'},
 	paramtype = 'light',
@@ -36,7 +49,7 @@ core.register_alias('glass:glass', 'glass:plain')
 --
 -- @node glass:obsidian
 core.register_node('glass:obsidian', {
-	description = 'Obsidian Glass',
+	description = S('Obsidian Glass'),
 	drawtype = 'glasslike_framed_optional',
 	tiles = {'glass_obsidian.png', 'glass_obsidian_detail.png'},
 	paramtype = 'light',
