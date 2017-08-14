@@ -1,0 +1,1 @@
+- Use node highlighting for colored glass
