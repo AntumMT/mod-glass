@@ -19,6 +19,7 @@ glass.path = core.get_modpath(glass.name)
 
 local scripts = {
 	'functions',
+	'nodes',
 }
 
 for _, s in ipairs(scripts) do
