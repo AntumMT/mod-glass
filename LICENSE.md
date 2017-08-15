@@ -22,7 +22,7 @@ Various Minetest developers and contributors ([LGPL 2.1][lic.lgpl)
 ---
 ### **Textures:**
 
-- Perttu Ahola ([celeron55](mailto:celeron55@gmail.com), ***CC BY-SA 3.0:***
+- Perttu Ahola ([celeron55](mailto:celeron55@gmail.com)), ***CC BY-SA 3.0:***
   - glass_obsidian_detail.png
   - glass_plain.png
 
