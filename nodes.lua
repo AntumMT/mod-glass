@@ -95,9 +95,6 @@ else
 	})
 end
 
-core.register_alias('glass', 'glass:plain')
-core.register_alias('glass:glass', 'glass:plain')
-
 
 --- Obsidian glass.
 --
@@ -113,15 +110,27 @@ core.register_node('glass:obsidian', {
 	groups = {cracky=3, oddly_breakable_by_hand=3},
 	sounds = glass.node_sounds(),
 })
-core.register_alias('obsidian_glass', 'glass:obsidian')
 
 
 -- Compatibility
 
 if core.get_modpath('default') then
-	core.unregister_item('default:glass')
-	core.unregister_item('default:obsidian_glass')
+	local glass_overrides = {
+		'glass',
+		'obsidian_glass',
+	}
+	
+	for _, item in pairs(glass_overrides) do
+		core.unregister_item(item)
+		core.registered_nodes[item] = nil
+		core.registered_aliases[item] = nil
+	end
 end
 
-core.register_alias_force('default:glass', 'glass:plain')
-core.register_alias_force('default:obsidian_glass', 'glass:obsidian')
+core.register_alias('glass', 'glass:plain')
+core.register_alias('glass:glass', 'glass:plain')
+core.register_alias('obsidian_glass', 'glass:obsidian')
+
+-- Nodes from 'default'
+core.register_alias('default:glass', 'glass:plain')
+core.register_alias('default:obsidian_glass', 'glass:obsidian')
