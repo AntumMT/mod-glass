@@ -29,25 +29,25 @@ end
 
 local function dig_glass(pos, node, digger)
 	local inv = digger:get_inventory()
-	local can_dig = not core.is_protected(pos, digger:get_player_name()) and inv:room_for_item('main', node.name)
+	local can_dig = not core.is_protected(pos, digger:get_player_name())
+	local drops = {}
 	
 	if digger:is_player() then
 		local meta = core.get_meta(pos)
 		
 		if can_dig then
-			-- FIXME: Make a copy of InvRef to test room for dye
-			inv:add_item('main', node.name)
+			if not inv:room_for_item('main', node.name) then
+				table.insert(drops, node.name)
+			else
+				inv:add_item('main', node.name)
+			end
 			
 			if meta then
 				local dye = meta:get_string('dye')
 				
 				if dye and dye ~= '' then
-					-- Don't allow players to dig node if no room for dye in inventory
-					can_dig = inv:room_for_item('main', dye)
-					
-					if not can_dig then
-						-- Remove added node from inventory
-						inv:remove_item('main', node.name)
+					if not inv:room_for_item('main', dye) then
+						table.insert(drops, dye)
 					else
 						inv:add_item('main', dye)
 					end
@@ -58,6 +58,7 @@ local function dig_glass(pos, node, digger)
 	
 	if can_dig then
 		core.remove_node(pos)
+		core.handle_node_drops(pos, drops, digger)
 	end
 end
 
