@@ -27,6 +27,9 @@ else
 end
 
 
+local enable_colors = core.global_exists('unifieddyes') or core.get_modpath('unifieddyes')
+
+
 local function dig_glass(pos, node, digger)
 	local inv = digger:get_inventory()
 	local can_dig = not core.is_protected(pos, digger:get_player_name())
@@ -63,38 +66,30 @@ local function dig_glass(pos, node, digger)
 end
 
 
+local glass_def = {
+	description = S('Glass'),
+	drawtype = 'glasslike_framed_optional',
+	tiles = {'glass_plain.png', 'glass_plain_detail.png'},
+	paramtype = 'light',
+	paramtype2 = 'glasslikeliquidlevel',
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky=3, oddly_breakable_by_hand=3},
+	sounds = glass.node_sounds(),
+}
+
+if enable_colors then
+	glass_def.paramtype2 = 'color'
+	glass_def.palette = 'unifieddyes_palette.png'
+	glass_def.groups['ud_param2_colorable'] = 1
+	glass_def.on_dig = dig_glass
+end
+
+
 --- Plain glass.
 --
 -- @node glass:plain
-if not core.global_exists('unifieddyes') and not core.get_modpath('unifieddyes') then
-	-- Non-colorable glass
-	core.register_node('glass:plain', {
-		description = S('Glass'),
-		drawtype = 'glasslike_framed_optional',
-		tiles = {'glass_plain.png', 'glass_plain_detail.png'},
-		paramtype = 'light',
-		paramtype2 = 'glasslikeliquidlevel',
-		sunlight_propagates = true,
-		is_ground_content = false,
-		groups = {cracky=3, oddly_breakable_by_hand=3},
-		sounds = glass.node_sounds(),
-	})
-else
-	-- Colorable glass
-	core.register_node('glass:plain', {
-		description = S('Glass'),
-		drawtype = 'glasslike_framed_optional',
-		tiles = {'glass_plain.png', 'glass_plain_detail.png'},
-		paramtype = 'light',
-		paramtype2 = 'colorwallmounted',
-		palette = 'unifieddyes_palette_colorwallmounted.png',
-		sunlight_propagates = true,
-		is_ground_content = false,
-		groups = {cracky=3, oddly_breakable_by_hand=3, ud_param2_colorable=1},
-		sounds = glass.node_sounds(),
-		on_dig = dig_glass,
-	})
-end
+core.register_node('glass:plain', glass_def)
 
 
 --- Obsidian glass.
