@@ -8,6 +8,8 @@ Minetest mod that replaces glass nodes from the [default][] mod in [minetest_gam
 
 ***NOTE:*** *This mod is a **work-in-progress**. Not all glass nodes have been yet added.*
 
+![Screenshot](screenshot.png)
+
 ---
 ### **Features:**
 
