@@ -11,10 +11,10 @@
 
 --- Glass craft recipes.
 --
--- @modlule crafting
+-- @module crafting
 
 
---- Cooking.
+--- Cooking Recipes.
 --
 -- @section cooking
 
