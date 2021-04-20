@@ -1,10 +1,10 @@
 --[[ LICENSE HEADER
-  
+
   GNU Lesser General Public License version 2.1+
-  
+
   Copyright © 2017 Perttu Ahola (celeron55) <celeron55@gmail.com>
   Copyright © 2017 Minetest developers & contributors
-  
+
   See: docs/license-LGPL-2.1.txt
 ]]
 
@@ -34,20 +34,20 @@ local function dig_glass(pos, node, digger)
 	local inv = digger:get_inventory()
 	local can_dig = not core.is_protected(pos, digger:get_player_name())
 	local drops = {}
-	
+
 	if digger:is_player() then
 		local meta = core.get_meta(pos)
-		
+
 		if can_dig then
 			if not inv:room_for_item('main', node.name) then
 				table.insert(drops, node.name)
 			else
 				inv:add_item('main', node.name)
 			end
-			
+
 			if meta then
 				local dye = meta:get_string('dye')
-				
+
 				if dye and dye ~= '' then
 					if not inv:room_for_item('main', dye) then
 						table.insert(drops, dye)
@@ -58,7 +58,7 @@ local function dig_glass(pos, node, digger)
 			end
 		end
 	end
-	
+
 	if can_dig then
 		core.remove_node(pos)
 		core.handle_node_drops(pos, drops, digger)
@@ -115,7 +115,7 @@ if core.get_modpath('default') then
 		'glass',
 		'obsidian_glass',
 	}
-	
+
 	for _, item in pairs(glass_overrides) do
 		core.unregister_item(item)
 		core.registered_nodes[item] = nil
