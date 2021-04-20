@@ -14,17 +14,7 @@
 -- @module nodes
 
 
--- Boilerplate to support localized strings if intllib mod is installed.
-local S
-if core.global_exists('intllib') then
-	if intllib.make_gettext_pair then
-		S = intllib.make_gettext_pair()
-	else
-		S = intllib.Getter()
-	end
-else
-	S = function(s) return s end
-end
+local S = core.get_translator()
 
 
 local enable_colors = core.global_exists('unifieddyes') or core.get_modpath('unifieddyes')
