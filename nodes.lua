@@ -80,7 +80,7 @@ local glass_def = {
 
 if enable_colors then
 	glass_def.paramtype2 = 'color'
-	glass_def.palette = 'unifieddyes_palette.png'
+	glass_def.palette = 'unifieddyes_palette_extended.png'
 	glass_def.groups['ud_param2_colorable'] = 1
 	glass_def.on_dig = dig_glass
 end
