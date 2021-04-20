@@ -6,6 +6,8 @@
 
 Minetest mod that replaces glass nodes from the [default][] mod in [minetest_game][] & adds colored glass & other enhancements.
 
+- [Forum thread](https://forum.minetest.net/viewtopic.php?t=18307)
+
 ***NOTE:*** *This mod is a **work-in-progress**. Not all glass nodes have been yet added.*
 
 ![Screenshot](screenshot.png)
@@ -22,7 +24,6 @@ Minetest mod that replaces glass nodes from the [default][] mod in [minetest_gam
 ### ***Licensing:***
 
 - LGPL
-- CC BY-SA
 - See: [LICENSE.md](LICENSE.md)
 
 
