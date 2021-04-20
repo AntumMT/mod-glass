@@ -102,8 +102,8 @@ core.register_node('glass:obsidian', {
 
 if core.get_modpath('default') then
 	local glass_overrides = {
-		'glass',
-		'obsidian_glass',
+		'default:glass',
+		'default:obsidian_glass',
 	}
 
 	for _, item in pairs(glass_overrides) do
@@ -118,5 +118,5 @@ core.register_alias('glass:glass', 'glass:plain')
 core.register_alias('obsidian_glass', 'glass:obsidian')
 
 -- Nodes from 'default'
-core.register_alias_force('default:glass', 'glass:plain')
-core.register_alias_force('default:obsidian_glass', 'glass:obsidian')
+core.register_alias('default:glass', 'glass:plain')
+core.register_alias('default:obsidian_glass', 'glass:obsidian')
