@@ -52,20 +52,22 @@ for _, glass_name in ipairs(to_color) do
 			glass_def[k] = v
 		end
 
-		if next(glass_def) then
+		if not next(glass_def) then
+			glass.log("warning", "\"" .. glass_name .. "\" not registered, skipping ...")
+		else
+			glass.log("action", "overwriting node \"" .. glass_name .. "\"")
 			glass_def.paramtype2 = "color"
 			glass_def.palette = "unifieddyes_palette_extended.png"
 			glass_def.groups["ud_param2_colorable"] = 1
 			glass_def.on_dig = unifieddyes.on_dig
 
 			-- unregister old node
-			core.unregister_item(glass_name)
-			core.registered_nodes[glass_name] = nil
+			--core.unregister_item(glass_name)
 
 			-- register new node
-			core.register_node(":" .. glass_name, glass_def)
-		else
-			core.log("warning", glass_name .. " not registered, skipping ...")
+			--core.register_node(":" .. glass_name, glass_def)
+
+			core.override_item(glass_name, glass_def)
 		end
 	end
 end
