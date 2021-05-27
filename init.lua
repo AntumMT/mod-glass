@@ -19,11 +19,11 @@ glass.path = core.get_modpath(glass.name)
 
 
 local scripts = {
-	'functions',
-	'nodes',
-	'crafting',
+	"functions",
+	"nodes",
+	"crafting",
 }
 
 for _, s in ipairs(scripts) do
-	dofile(glass.path .. '/' .. s .. '.lua')
+	dofile(glass.path .. "/" .. s .. ".lua")
 end
