@@ -2,4 +2,4 @@
 TODO:
 - add option to override nodes to "glass:" namespace
 - add some currently unsupported nodes
-- make independent of default
+- make independent of default while retaining compatibility
