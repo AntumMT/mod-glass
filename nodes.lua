@@ -46,28 +46,28 @@ local next = next
 for _, glass_name in ipairs(to_color) do
 
 	local glass_def = {}
-	for k, v in pairs(core.registered_nodes[glass_name]) do
-		glass_def[k] = v
+	local g_temp = core.registered_nodes[glass_name]
+	if g_temp then
+		for k, v in pairs(g_temp) do
+			glass_def[k] = v
+		end
+
+		if next(glass_def) then
+			glass_def.paramtype2 = 'color'
+			glass_def.palette = 'unifieddyes_palette_extended.png'
+			glass_def.groups['ud_param2_colorable'] = 1
+			glass_def.on_dig = unifieddyes.on_dig
+
+			-- unregister old node
+			core.unregister_item(glass_name)
+			core.registered_nodes[glass_name] = nil
+
+			-- register new node
+			core.register_node(':' .. glass_name, glass_def)
+		else
+			core.log('warning', glass_name .. ' not registered, skipping ...')
+		end
 	end
-
-	if next(glass_def) == nil then
-		core.log('warning', glass_name .. ' not registered, skipping ...')
-		goto continue
-	end
-
-	glass_def.paramtype2 = 'color'
-	glass_def.palette = 'unifieddyes_palette_extended.png'
-	glass_def.groups['ud_param2_colorable'] = 1
-	glass_def.on_dig = unifieddyes.on_dig
-
-	-- unregister old node
-	core.registered_nodes[glass_name] = nil
-
-	-- register new node
-	core.register_node(':' .. glass_name, glass_def)
-
-
-	::continue::
 end
 
 -- backward compat (1.0)
