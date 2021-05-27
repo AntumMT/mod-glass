@@ -44,31 +44,22 @@ local to_color = {
 
 local next = next
 for _, glass_name in ipairs(to_color) do
+	local node = core.registered_nodes[glass_name]
 
-	local glass_def = {}
-	local g_temp = core.registered_nodes[glass_name]
-	if g_temp then
-		for k, v in pairs(g_temp) do
-			glass_def[k] = v
-		end
+	if not node then
+		glass.log("warning", "\"" .. glass_name .. "\" not registered, skipping ...")
+	else
+		glass.log("info", "overriding node \"" .. glass_name .. "\" to be colorable")
 
-		if not next(glass_def) then
-			glass.log("warning", "\"" .. glass_name .. "\" not registered, skipping ...")
-		else
-			glass.log("action", "overwriting node \"" .. glass_name .. "\"")
-			glass_def.paramtype2 = "color"
-			glass_def.palette = "unifieddyes_palette_extended.png"
-			glass_def.groups["ud_param2_colorable"] = 1
-			glass_def.on_dig = unifieddyes.on_dig
+		local groups = node.groups
+		groups["ud_param2_colorable"] = 1
 
-			-- unregister old node
-			--core.unregister_item(glass_name)
-
-			-- register new node
-			--core.register_node(":" .. glass_name, glass_def)
-
-			core.override_item(glass_name, glass_def)
-		end
+		core.override_item(glass_name, {
+			paramtype2 = "color",
+			palette = "unifieddyes_palette_extended.png",
+			groups = groups,
+			on_dig = unifieddyes.on_dig,
+		})
 	end
 end
 
