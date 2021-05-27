@@ -3,7 +3,7 @@
 ---
 ### Description:
 
-[Minetest][] mod that makes [default glass nodes][default] colorable.
+[Minetest][] mod that makes [default glass nodes][default] colorable with *unifieddyes:airbrush*.
 
 ***NOTE:*** *This mod is a **work-in-progress**. Not all glass node types have been added.*
 
