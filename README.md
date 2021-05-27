@@ -23,8 +23,7 @@ Minetest mod that replaces glass nodes from the [default][] mod in [minetest_gam
 ---
 ### ***Licensing:***
 
-- LGPL
-- See: [LICENSE.md](LICENSE.md)
+- [MIT](LICENSE.txt)
 
 
 

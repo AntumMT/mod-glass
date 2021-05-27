@@ -3,6 +3,7 @@ v1.1
 ----
 - preserve old node name instead of registering new ones
 - simplified overriding method
+- changed to MIT license
 
 v1.0
 ----
