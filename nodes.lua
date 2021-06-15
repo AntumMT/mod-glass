@@ -138,6 +138,18 @@ for _, gn in ipairs(glass_nodes) do
 			def.groups["ud_param2_colorable"] = 1
 
 			core.register_node(":" .. gn.name, def)
+
+			if gn.craft then
+				core.unregister_craft({recipe=gn.craft.recipe})
+
+				local craft_def = {
+					output = gn.craft.output or gn.name,
+					recipe = gn.craft.recipe,
+				}
+				if gn.craft.count then craft_def.output = craft_def.output .. " " .. gn.craft.count end
+
+				core.register_craft(craft_def)
+			end
 		end
 	end
 end
