@@ -13,12 +13,13 @@
 
 #### Texture Sources:
 
-| Filename              | Author      | License | Source                   |
-| --------------------- | ----------- | ------- | ------------------------ |
-| glass_plain           | Krock       | CC0     | [minetest_game][default] |
-| glass_plain_detail    | Krock       | CC0     | [minetest_game][default] |
-| glass_obsidian        | AntumDeluge | CC0     | glass                    |
-| glass_obsidian_detail | AntumDeluge | CC0     | glass                    |
+| Filename              | Author      | License | Source      |
+| --------------------- | ----------- | ------- | ----------- |
+| glass_plain           | Krock       | CC0     | [default][] |
+| glass_plain_detail    | Krock       | CC0     | [default][] |
+| glass_plain_edge      | Krock       | CC0     | [xpanes][]  |
+| glass_obsidian        | AntumDeluge | CC0     | glass       |
+| glass_obsidian_detail | AntumDeluge | CC0     | glass       |
 
 ### Dependencies:
 
@@ -37,5 +38,8 @@ Required:
 
 [Minetest]: http://www.minetest.net/
 [ContentDB]: https://content.minetest.net/packages/AntumDeluge/glass/
+
 [default]: https://github.com/minetest/minetest_game/tree/master/mods/default
+[xpanes]: https://github.com/minetest/minetest_game/tree/master/mods/xpanes
+
 [unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
