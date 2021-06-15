@@ -20,6 +20,7 @@
 | glass_plain_edge      | Krock       | CC0     | [xpanes][]  |
 | glass_obsidian        | AntumDeluge | CC0     | glass       |
 | glass_obsidian_detail | AntumDeluge | CC0     | glass       |
+| glass_obsidian_edge   | AntumDeluge | CC0     | glass       |
 
 ### Dependencies:
 
