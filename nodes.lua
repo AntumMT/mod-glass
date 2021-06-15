@@ -89,6 +89,47 @@ local glass_nodes = {
 	{
 		name = "default:obsidian_glass_thinstair",
 	},
+	-- xpanes
+	--[[ FIXME:
+				- overriding paramtype2 = "facedir" causes ugly connections
+				- connected nodes change color
+	{
+		name = "xpanes:pane_flat",
+		description = S("Glass Pane"),
+		paramtype2 = "facedir",
+		drawtype = "nodebox",
+		tiles = {
+			"glass_plain_edge.png",
+			"glass_plain_edge.png",
+			"glass_plain_edge.png",
+			"glass_plain_edge.png",
+			"glass_plain.png",
+			"glass_plain.png",
+		},
+		inventory_image = "default_glass.png",
+		wield_image = "default_glass.png",
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-1/2, -1/2, -1/32, 1/2, 1/2, 1/32},
+			},
+		},
+		selection_box = {
+			type = "fixed",
+			fixed = {
+				{-1/2, -1/2, -1/32, 1/2, 1/2, 1/32},
+			},
+		},
+		connect_sides = {"left", "right"},
+		groups = {cracky=3, oddly_breakable_by_hand=3, pane=1},
+		craft = {
+			recipe = {
+				{"default:glass", "default:glass", "default:glass"},
+				{"default:glass", "default:glass", "default:glass"},
+			},
+		},
+	},
+	]]
 }
 
 
