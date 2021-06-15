@@ -17,6 +17,8 @@
 | --------------------- | ----------- | ------- | ------------------------ |
 | glass                 | Krock       | CC0     | [minetest_game][default] |
 | glass_detail          | Krock       | CC0     | [minetest_game][default] |
+| glass_obsidian        | AntumDeluge | CC0     | glass                    |
+| glass_obsidian_detail | AntumDeluge | CC0     | glass                    |
 
 ### Dependencies:
 
