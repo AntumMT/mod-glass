@@ -29,17 +29,37 @@ local glass_nodes = {
 		description = S("Obsidian Glass"),
 		tiles = {"glass_obsidian.png", "glass_obsidian_detail.png"},
 	},
+	-- stairs
+	{
+		name = "stairs:stair_glass",
+	},
+	{
+		name = "stairs:stair_inner_glass",
+	},
+	{
+		name = "stairs:stair_outer_glass",
+	},
+	{
+		name = "stairs:slab_glass",
+	},
+	{
+		name = "stairs:stair_obsidian_glass",
+	},
+	{
+		name = "stairs:stair_inner_obsidian_glass",
+	},
+	{
+		name = "stairs:stair_outer_obsidian_glass",
+	},
+	{
+		name = "stairs:slab_obsidian_glass",
+	},
+	-- ???
 	{
 		name = "default:glass_cube",
 	},
 	{
 		name = "default:glass_doublepanel",
-	},
-	{
-		name = "default:glass_halfstair",
-	},
-	{
-		name = "default:glass_innerstair",
 	},
 	{
 		name = "default:glass_micropanel",
@@ -51,25 +71,13 @@ local glass_nodes = {
 		name = "default:glass_nanoslab",
 	},
 	{
-		name = "default:glass_outerstair",
-	},
-	{
 		name = "default:glass_panel",
-	},
-	{
-		name = "default:glass_thinstair",
 	},
 	{
 		name = "default:obsidian_glass_cube",
 	},
 	{
 		name = "default:obsidian_glass_doublepanel",
-	},
-	{
-		name = "default:obsidian_glass_halfstair",
-	},
-	{
-		name = "default:obsidian_glass_innerstair",
 	},
 	{
 		name = "default:obsidian_glass_micropanel",
@@ -81,13 +89,7 @@ local glass_nodes = {
 		name = "default:obsidian_glass_nanoslab",
 	},
 	{
-		name = "default:obsidian_glass_outerstair",
-	},
-	{
 		name = "default:obsidian_glass_panel",
-	},
-	{
-		name = "default:obsidian_glass_thinstair",
 	},
 	-- xpanes
 	--[[ FIXME:
