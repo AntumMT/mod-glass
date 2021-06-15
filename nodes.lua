@@ -114,20 +114,30 @@ for _, gn in ipairs(glass_nodes) do
 		elseif gn.tiles then
 			glass.log("info", "registering colorable node \"" .. gn.name .. "\"")
 
-			core.register_node(":" .. gn.name, {
+			local def = {
 				description = gn.description,
+				drawtype = gn.drawtype or "glasslike_framed_optional",
 				tiles = gn.tiles,
-				drawtype = "glasslike_framed_optional",
+				inventory_image = gn.inventory_image,
+				wield_image = gn.wield_image,
+				node_box = gn.node_box,
+				selection_box = gn.selection_box,
+				connect_sides = gn.connect_sides,
 				--use_texture_alpha = "clip",
 				paramtype = "light",
+				--paramtype2 = gn.paramtype2 or "color",
 				paramtype2 = "color",
 				palette = "unifieddyes_palette_extended.png",
 				sunlight_propagates = true,
 				is_ground_content = false,
-				groups = {cracky=3, oddly_breakable_by_hand=3, ud_param2_colorable=1},
+				groups = gn.groups or {cracky=3, oddly_breakable_by_hand=3},
 				sounds = sounds.node_glass(),
 				on_dig = unifieddyes.on_dig,
-			})
+			}
+
+			def.groups["ud_param2_colorable"] = 1
+
+			core.register_node(":" .. gn.name, def)
 		end
 	end
 end
