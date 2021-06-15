@@ -13,6 +13,10 @@
 -- @module init
 
 
+if not core.global_exists("sounds") and not core.global_exists("default") then
+	error("this mod requires either \"sounds\" or \"default\"")
+end
+
 glass = {}
 glass.modname = core.get_current_modname()
 glass.modpath = core.get_modpath(glass.modname)
