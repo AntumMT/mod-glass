@@ -1,4 +1,6 @@
-# Translation by
+# textdomain:glass
+
+# Translators:
 
 
 Glass=
