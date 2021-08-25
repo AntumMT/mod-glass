@@ -31,6 +31,11 @@ local nodes = {
 		tiles = {"glass_plain.png", "glass_plain_detail.png"},
 		recipe = "group:sand",
 	},
+	streakless = {
+		description = S("Streakless Glass"),
+		tiles = {"glass_streakless.png", "glass_streakless_detail.png"},
+		recipe = "glass:plain",
+	},
 	obsidian = {
 		description = S("Obsidian Glass"),
 		tiles = {"glass_obsidian.png", "glass_obsidian_detail.png"},
