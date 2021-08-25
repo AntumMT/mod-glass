@@ -22,6 +22,7 @@ local base_def = {
 		cracky = 3,
 		oddly_breakable_by_hand = 3,
 		ud_param2_colorable = colored and 1 or nil,
+		glass = 1,
 	},
 }
 
