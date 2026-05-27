@@ -13,20 +13,20 @@
 
 #### Texture Sources:
 
-| Filename              | Author      | License | Source      |
-| --------------------- | ----------- | ------- | ----------- |
-| glass_plain           | Krock       | CC0     | [default][] |
-| glass_plain_detail    | Krock       | CC0     | [default][] |
-| glass_plain_edge      | Krock       | CC0     | [xpanes][]  |
-| glass_obsidian        | AntumDeluge | CC0     | glass       |
-| glass_obsidian_detail | AntumDeluge | CC0     | glass       |
-| glass_obsidian_edge   | AntumDeluge | CC0     | glass       |
+| Filename              | Author      | License | Source    |
+| --------------------- | ----------- | ------- | --------- |
+| glass_plain           | Krock       | CC0     | [default] |
+| glass_plain_detail    | Krock       | CC0     | [default] |
+| glass_plain_edge      | Krock       | CC0     | [xpanes]  |
+| glass_obsidian        | AntumDeluge | CC0     | glass     |
+| glass_obsidian_detail | AntumDeluge | CC0     | glass     |
+| glass_obsidian_edge   | AntumDeluge | CC0     | glass     |
 
 ### Dependencies:
 
 Required:
-- [default][]
-- [unifieddyes][]
+- [default]
+- [unifieddyes]
 
 ### Links:
 
