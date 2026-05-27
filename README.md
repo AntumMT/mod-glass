@@ -32,7 +32,10 @@ Required:
 
 - [![ContentDB](https://content.luanti.org/packages/AntumDeluge/glass/shields/title/)][ContentDB]
 - [Forum](https://forum.luanti.org/viewtopic.php?t=18307)
-- [Git repo](https://github.com/AntumMT/mod-glass)
+- Git repos:
+    - [Codeberg](https://codeberg.org/AntumLuanti/mod-glass)
+    - [GitHub](https://github.com/AntumMT/mod-glass)
+    - [GitLab](https://gitlab.com/AntumMT/mod-glass)
 - [Changelog](changelog.txt)
 - [TODO](TODO.txt)
 
