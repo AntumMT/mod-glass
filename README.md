@@ -46,4 +46,4 @@ Required:
 [default]: https://github.com/luanti-org/minetest_game/tree/master/mods/default
 [xpanes]: https://github.com/luanti-org/minetest_game/tree/master/mods/xpanes
 
-[unifieddyes]: https://forum.minetest.net/viewtopic.php?t=2178
+[unifieddyes]: https://content.luanti.org/packages/mt-mods/unifieddyes/
