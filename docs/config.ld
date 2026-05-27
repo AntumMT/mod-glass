@@ -1,5 +1,5 @@
 title = 'Glass'
-project = 'Glass Mod for Minetest mods'
+project = 'Glass Mod for Luanti'
 format = 'discount'
 not_luadoc = true
 
